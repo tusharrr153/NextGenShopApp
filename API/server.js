@@ -16,7 +16,7 @@ app.get('/', (req, res) => res.json({ message: "this is home route" }))
 app.use('/api/user', userRouter)
 
 //product router
-app.use('api/product', productRouter)
+app.use('/api/product', productRouter)
 
 
 //mongodb connection
