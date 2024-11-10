@@ -4,7 +4,7 @@ import bodyParser from 'express';
 import userRouter from './Routes/user.js';
 import productRouter from './Routes/product.js';
 import cartRouter from './Routes/cart.js';
-
+import addressRouter from './Routes/address.js';
 const app = express();
 
 app.use(bodyParser.json())
@@ -20,6 +20,10 @@ app.use('/api/product', productRouter)
 
 //cart router
 app.use('/api/cart', cartRouter)
+
+//adrees router
+app.use('/api/address', addressRouter)
+
 //mongodb connection
 mongoose.connect("mongodb+srv://tusharjadhav2134:xCsC7Xuxyk39EAul@cluster0.whaur.mongodb.net/",
 
